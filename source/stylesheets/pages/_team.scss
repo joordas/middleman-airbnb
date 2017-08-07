@@ -1,0 +1,17 @@
+.team {
+  padding-top: 40px;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+  .team-member {
+    padding: 20px;
+    h3 {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.team-page {
+  flex: 1;
+}
