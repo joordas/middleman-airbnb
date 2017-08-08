@@ -3,6 +3,7 @@ activate :autoprefixer do |prefix|
 end
 
 activate :sprockets
+# activate :directory_indexes
 
 page '/*.xml', layout: false
 page '/*.json', layout: false
@@ -19,4 +20,8 @@ end
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.deploy_method = :git
+end
+
+data.flats.each do |owner, flat|
+  proxy "/flats/#{owner}.html", "/flats/show.html", locals: { owner: owner }, ignore:true
 end

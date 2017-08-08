@@ -1,0 +1,71 @@
+.flat-banner {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+  .flat-owner {
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .flat-stars {
+      color: $yellow;
+    }
+    p {
+      padding-top: 10px;
+
+      margin-bottom: 0;
+    }
+    img {
+      width: 200px;
+    }
+  }
+  h1 {
+    position: absolute;
+    color: $white;
+    text-shadow: $light-text-shadow;
+    top: 50%;
+    left: 25%;
+    font-size: 4em;
+    font-weight: bold;
+  }
+}
+
+.flat-container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .flat-contents {
+    display: flex;
+    justify-content: space-between;
+    .flat-desc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .flat-desc-desc {
+        font-size: 1.2em;
+      }
+      .flat-desc-city {
+        font-size: 0.8em;
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
+
+.book-form {
+  margin: 30px 0 30px 300px;
+  align-self: flex-end;
+  background-color: $light-gray;
+  padding: 30px;
+  border-radius: 5px;
+  max-width: 500px;
+  h3 {
+    font-size: 1.3em;
+  }
+}

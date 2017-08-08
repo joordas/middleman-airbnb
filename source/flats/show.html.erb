@@ -1,0 +1,61 @@
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<div class="flat-banner" style="background-image: linear-gradient(rgba(235,87,87, 0.16) 100%, rgba(69,162,71, 0.4)), url(<%= "https://kitt.lewagon.com/placeholder/cities/#{flat.city_slug}"%>)">
+
+  <div class="flat-owner">
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle" %>
+    <p><%= owner %></p>
+    <div class="flat-stars">
+      <% flat.rating.times do %>
+        <i class="fa fa-star"></i>
+      <% end %>
+      <% (5- flat.rating).times do %>
+        <i class="fa fa-star-o"></i>
+    <% end %>
+    </div>
+  </div>
+  <h1><%= flat.name %></h1>
+</div>
+<div class="flat-container">
+  <div class="flat-contents">
+    <div class="flat-desc">
+      <p class="flat-desc-desc"><%= flat.description %></p>
+      <p class="flat-desc-city"><%= flat.city_name %></p>
+    </div>
+    <div class="book-form">
+        <h3>Book your flat</h3>
+          <form action="" >
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="first-name" placeholder="Check-in">
+                </div>
+              </div>
+
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="last-name" placeholder="Check-out">
+                </div>
+           </form>
+          <form action="" class="dropdown">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <select id="favorite" class="form-control" name="refer">
+                    <option value="" disabled selected>How Many Guests?</option>
+                    <option value="facebook">1</option>
+                    <option value="twitter">2</option>
+                    <option value="Friend">3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+          <a href="#" "signup" class="btn btn-primary btn-md col-xs-12">Book it</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
